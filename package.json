@@ -1,0 +1,19 @@
+{
+  "name": "who.do",
+  "version": "1.0.0",
+  "description": "who.do is a concept to bring and create a community of developers, freelancers and/or hobbyists to share skills and knowledge with each other.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tejasladhe24/who.do.git"
+  },
+  "author": "Tejas Ladhe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tejasladhe24/who.do/issues"
+  },
+  "homepage": "https://github.com/tejasladhe24/who.do#readme"
+}
