@@ -1,0 +1,112 @@
+<div class="dashboard-content">
+  <header class="flex space-between center">
+    <div class="flex align-center spaced-10">
+      <i class="fas fa-cat md-48 zoom"></i>
+      <div>
+        <h3 class="text-nowrap">Ayo Nigga, shiz rockin' man!!</h3>
+        <p class="text-nowrap">Stay up to date with your team</p>
+      </div>
+    </div>
+    <div class="flex align-center spaced-10">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by keywords"
+      />
+      <i class="fas fa-search link zoom"></i>
+      <i class="fas fa-cog link animated zoom-rotate"></i>
+      <div class="icon profile-icon zoom">
+        <i class="fas fa-user" style="color: white"></i>
+      </div>
+    </div>
+  </header>
+
+  <div class="stories flex align-center">
+    <div>
+      <div class="link" (click)="viewEditor()">
+        <div class="icon profile-icon">
+          <i class="fas fa-user" style="color: white"></i>
+          <i class="fas fa-plus-circle story-add" style="color: #555"></i>
+        </div>
+        <p class="text-center">You</p>
+      </div>
+    </div>
+    <div *ngFor="let elem of stories">
+      <div class="link" *ngIf="!elem.read">
+        <div class="icon profile-icon story-border">
+          <i class="fas fa-user" style="color: white"></i>
+        </div>
+        <p class="text-center text-nowrap">{{ elem.name }}</p>
+      </div>
+      <div class="link" *ngIf="elem.read">
+        <div class="icon profile-icon">
+          <i class="fas fa-user" style="color: white"></i>
+        </div>
+        <p class="text-center text-nowrap">{{ elem.name }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex space-between">
+    <div class="posts">
+      <div class="editor animated fadeDown" *ngIf="view_editor">
+        <angular-editor
+          [placeholder]="'Enter text here...'"
+          [(ngModel)]="htmlContent"
+        ></angular-editor>
+      </div>
+      <div class="post-item" *ngFor="let elem of posts">
+        <div class="flex space-between align-center">
+          <div class="flex align-center spaced-10">
+            <div>
+              <div
+                *ngIf="!elem.story_read"
+                class="icon profile-icon story-border"
+              >
+                <i class="fas fa-user" style="color: white"></i>
+              </div>
+              <div *ngIf="elem.story_read" class="icon profile-icon">
+                <i class="fas fa-user" style="color: white"></i>
+              </div>
+            </div>
+            <div>
+              <p style="margin: 0" class="link bold">{{ elem.name }}</p>
+              <p style="margin: 0">{{ elem.date }}</p>
+            </div>
+          </div>
+          <div>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
+        <div *ngIf="elem.type == 0" class="post-content">
+          <img src="{{ elem.img }}" alt="" width="100%" />
+        </div>
+        <div *ngIf="elem.type == 1" class="post-content">
+          <h3>{{ elem.heading }}</h3>
+          <p>{{ elem.text }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="side-menu">
+      <div class="flex space-between align-center">
+        <h5>CHAT</h5>
+        <!-- <i class="fas fa-chevron-down" *ngIf="!view_dm"></i>
+        <i class="fas fa-chevron-up" *ngIf="view_dm"></i> -->
+      </div>
+      <div>
+        <ul class="msgs-list">
+          <li class="chat-person">Abbie W</li>
+          <li class="chat-person">Tan W</li>
+          <li class="chat-person">Sudanka B</li>
+          <li class="chat-person">Gasper A</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="relative">
+  <div class="icon scroll-top-icon">
+    <i class="fas fa-arrow-up" style="color: white"></i>
+  </div>
+</div> -->
