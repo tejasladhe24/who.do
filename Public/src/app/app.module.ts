@@ -6,6 +6,9 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PostsModule } from './dashboard/posts/posts.module';
+import { StoriesModule } from './dashboard/stories/stories.module';
+import { SidebarModule } from './dashboard/sidebar/sidebar.module';
 
 @NgModule({
   declarations: [AppComponent, DashboardComponent],
@@ -15,6 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     AngularEditorModule,
     FormsModule,
     HttpClientModule,
+    PostsModule,
+    StoriesModule,
+    SidebarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

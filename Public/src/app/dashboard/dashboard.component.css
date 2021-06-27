@@ -5,30 +5,6 @@
 .header {
   padding: 10px 0;
 }
-.link {
-  cursor: pointer;
-}
-
-.profile-icon {
-  background: linear-gradient(45deg, #ff4e50, #f9d423);
-  position: relative;
-}
-.scroll-top-icon {
-  background: #4ca1af;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-}
-
-.story-add {
-  position: absolute;
-  bottom: -10%;
-  right: -25%;
-}
-
-.story-border {
-  border: 2px solid #4ca1af;
-}
 
 .stories {
   border-radius: 10px;
@@ -38,54 +14,13 @@
   overflow-y: hidden;
   margin: 20px 10px;
 }
-.stories div {
-  margin: 0 15px;
-}
-.stories div p {
-  margin: 0;
-}
-
-.editor {
-  margin: 10px 0;
-  background: white;
-}
-
-.posts,
-.side-menu {
+.posts {
   height: 85vh;
   overflow-y: scroll;
   overflow-x: hidden;
-}
-.posts {
   width: 65%;
   background: #ddd;
 }
-.post-item {
-  background: white;
-  padding: 10px;
-  margin: 10px 0;
-}
-.post-content {
-  padding: 10px 0;
-}
-
 .side-menu {
   width: 30%;
-}
-.msgs-list {
-  padding: 0;
-  list-style-type: none;
-  height: 30vh;
-  overflow-y: scroll;
-}
-
-.msgs-list li {
-  padding: 10px 20px;
-  margin: 5px 0;
-  cursor: pointer;
-}
-
-.chat-person {
-  background: #b3ebe881;
-  border-radius: 1rem;
 }

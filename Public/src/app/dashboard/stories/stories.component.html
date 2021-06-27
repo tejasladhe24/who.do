@@ -1,0 +1,23 @@
+<div class="flex align-center">
+  <div class="link">
+    <div class="icon profile-icon">
+      <i class="fas fa-user" style="color: white"></i>
+      <i class="fas fa-plus-circle story-add" style="color: #555"></i>
+    </div>
+    <p class="text-center">You</p>
+  </div>
+  <div *ngFor="let elem of stories">
+    <div class="link" *ngIf="!elem.read">
+      <div class="icon profile-icon story-border">
+        <i class="fas fa-user" style="color: white"></i>
+      </div>
+      <p class="text-center text-nowrap">{{ elem.name }}</p>
+    </div>
+    <div class="link" *ngIf="elem.read">
+      <div class="icon profile-icon">
+        <i class="fas fa-user" style="color: white"></i>
+      </div>
+      <p class="text-center text-nowrap">{{ elem.name }}</p>
+    </div>
+  </div>
+</div>

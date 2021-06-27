@@ -1,0 +1,28 @@
+<div class="post-item" *ngFor="let elem of posts">
+  <div class="flex space-between align-center">
+    <div class="flex align-center spaced-10">
+      <div>
+        <div *ngIf="!elem.story_read" class="icon profile-icon story-border">
+          <i class="fas fa-user" style="color: white"></i>
+        </div>
+        <div *ngIf="elem.story_read" class="icon profile-icon">
+          <i class="fas fa-user" style="color: white"></i>
+        </div>
+      </div>
+      <div>
+        <p style="margin: 0" class="link bold">{{ elem.name }}</p>
+        <p style="margin: 0">{{ elem.date }}</p>
+      </div>
+    </div>
+    <div>
+      <i class="fas fa-ellipsis-v"></i>
+    </div>
+  </div>
+  <div *ngIf="elem.type == 0" class="post-content">
+    <img src="{{ elem.img }}" alt="" width="100%" />
+  </div>
+  <div *ngIf="elem.type == 1" class="post-content">
+    <h3>{{ elem.heading }}</h3>
+    <p>{{ elem.text }}</p>
+  </div>
+</div>
