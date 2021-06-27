@@ -1,3 +1,10 @@
+/* Colors */
+:root {
+  --primary: #5937b8;
+  --secondary: #9854cc;
+  --tertiary: #844cc4;
+}
+
 ::ng-deep * {
   margin: 0;
   padding: 0;
@@ -10,17 +17,19 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0;
+  width: 10px;
   height: 0;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #3123af 0%, #ba68d4 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--primary) 0%,
+    var(--secondary) 100%
+  );
   border-radius: 10px;
   height: 100px;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to top, #3123af 0%, #ba68d4 100%);
-}
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
@@ -119,7 +128,7 @@
 
 .zoom,
 .zoom-rotate {
-  transition: transform 0.5s ease-in;
+  transition: transform 0.1s ease-in;
 }
 .zoom:hover {
   transform: scale(1.5);
@@ -159,7 +168,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background: linear-gradient(45deg, #3123af 0%, #ba68d4 100%);
+  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -173,25 +182,14 @@
 .hori-line {
   height: 1px;
   margin: 10px;
-  background: linear-gradient(
-    to right,
-    #00000000 0%,
-    #888 20%,
-    #888 80%,
-    #00000000 100%
-  );
+  background: #ccc;
 }
 
 .ver-line {
   width: 1px;
   margin: 10px;
-  background: linear-gradient(
-    to bottom,
-    #00000000 0%,
-    #888 20%,
-    #888 80%,
-    #00000000 100%
-  );
+  background: #ccc;
+  height: 100%;
 }
 
 .icon {
@@ -205,22 +203,21 @@
 }
 
 .profile-icon {
-  background: linear-gradient(45deg, #ff4e50, #f9d423);
+  background: radial-gradient(
+    var(--tertiary),
+    var(--secondary),
+    var(--primary)
+  );
   position: relative;
 }
-.scroll-top-icon {
-  background: #4ca1af;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
+
+.search-input .fa-search {
+  position: absolute;
+  margin: 11px 0 0 10px;
 }
 
-.fas {
-  background-image: linear-gradient(45deg, #3123af 0%, #ba68d4 100%);
-  background-clip: text;
-  color: transparent;
-  margin: 0 10px;
-  cursor: pointer;
+.search-input input {
+  padding-left: 40px;
 }
 
 /* Text */

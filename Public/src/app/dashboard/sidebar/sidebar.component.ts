@@ -11,9 +11,12 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {}
 
   chats = [
-    { name: 'Abbie W' },
-    { name: 'Tan W' },
-    { name: 'Sudanka B' },
-    { name: 'Gasper A' },
+    {
+      name: 'Abbie W',
+      last_msg: 'Lorem',
+    },
+    { name: 'Tan W', last_msg: 'Lorem' },
+    { name: 'Sudanka B', last_msg: 'Lorem' },
+    { name: 'Gasper A', last_msg: 'Lorem' },
   ];
 }

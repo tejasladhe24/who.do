@@ -1,8 +1,23 @@
+* {
+  color: white;
+}
+
 .msgs-list {
+  width: 400px;
+  height: 100vh;
+  right: 0;
   padding: 0;
-  list-style-type: none;
-  height: 30vh;
+  position: fixed;
   overflow-y: scroll;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  background: #232323;
+  border-radius: 1rem 0 0 0;
+}
+
+.search-input {
+  margin: 20px;
 }
 
 .msgs-list li {
@@ -11,6 +26,25 @@
 }
 
 .chat-person {
-  background: #b3ebe881;
-  border-radius: 1rem;
+}
+
+.chat-person:hover {
+  background-color: rgba(255, 255, 255, 0.267);
+}
+
+.chat-person .details {
+  padding: 0 10px;
+}
+
+.fas {
+  /* background-image: linear-gradient(
+    45deg,
+    var(--primary) 0%,
+    var(--secondary) 100%
+  ); */
+  background: white;
+  background-clip: text;
+  color: transparent;
+  margin: 0 10px;
+  cursor: pointer;
 }

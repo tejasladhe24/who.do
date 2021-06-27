@@ -44,6 +44,6 @@ export class PostsComponent implements OnInit {
         }
       }
     }
-    console.log(this.posts);
+    // console.log(this.posts);
   }
 }

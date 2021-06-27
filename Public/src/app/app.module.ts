@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostsModule } from './dashboard/posts/posts.module';
 import { StoriesModule } from './dashboard/stories/stories.module';
 import { SidebarModule } from './dashboard/sidebar/sidebar.module';
+import { NavbarModule } from './navbar/navbar.module';
 
 @NgModule({
   declarations: [AppComponent, DashboardComponent],
@@ -21,6 +22,7 @@ import { SidebarModule } from './dashboard/sidebar/sidebar.module';
     PostsModule,
     StoriesModule,
     SidebarModule,
+    NavbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

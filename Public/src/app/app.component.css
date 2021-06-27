@@ -1,56 +1,9 @@
-.link {
-  cursor: pointer;
-}
-
-.background {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(45deg, #3123af 0%, #ba68d4 100%);
-  padding: 20px;
-}
-
-.panel {
-  overflow: hidden;
-  position: fixed;
-  margin: 0 auto;
-  top: 5%;
-  bottom: 5%;
-  left: 2%;
-  right: 2%;
-  border-radius: 2rem 2rem 0.5rem 0.5rem;
-  background: white;
+.main {
+  overflow-y: scroll;
 }
 
 .grid-view {
+  background-color: #f8f7ff;
   display: grid;
-  grid-template-columns: 300px auto;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-}
-.logo img {
-  width: 192px;
-}
-
-nav {
-  width: 300px;
-}
-
-.nav-list {
-  padding: 0 20px;
-  list-style-type: none;
-}
-
-.nav-list li {
-  padding: 10px 0;
-  cursor: pointer;
-}
-
-.container {
-  padding: 10px;
-  overflow-y: scroll;
+  grid-template-columns: 300px auto 400px;
 }

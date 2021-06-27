@@ -1,4 +1,27 @@
-<h5>CHAT</h5>
 <ul class="msgs-list">
-  <li class="chat-person link" *ngFor="let elem of chats">{{ elem.name }}</li>
+  <h3 style="margin: 20px 0 0 20px">Messages</h3>
+  <div class="search-input">
+    <i class="fas fa-search link zoom"></i>
+    <input
+      type="text"
+      class="form-control"
+      style="width: 100%"
+      placeholder="Search by Name"
+    />
+  </div>
+  <li class="chat-person link" *ngFor="let elem of chats">
+    <div class="flex">
+      <div class="icon profile-icon">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="details">
+        <div class="name">
+          {{ elem.name }}
+        </div>
+        <div class="last-msg">
+          {{ elem.last_msg }}
+        </div>
+      </div>
+    </div>
+  </li>
 </ul>

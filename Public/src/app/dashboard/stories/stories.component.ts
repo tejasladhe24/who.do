@@ -27,6 +27,6 @@ export class StoriesComponent implements OnInit {
         read: story.read,
       });
     }
-    console.log(this.stories);
+    // console.log(this.stories);
   }
 }
