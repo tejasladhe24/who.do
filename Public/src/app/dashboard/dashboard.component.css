@@ -1,21 +1,22 @@
+.fas {
+  color: #ffffff55;
+}
+
 .dashboard-content {
   padding: 20px;
-  background-color: #f8f7ff;
+  height: 100vh;
+  background-color: #232323;
+  background-repeat: no-repeat;
   overflow-y: scroll;
 }
 
-.header {
-  padding: 10px 0;
+.search-input input {
+  box-shadow: 0 0 15px #000;
+  background: #ffffff11;
+  color: white;
+  border: 1px solid #ffffff33;
 }
 
-.stories {
-  padding: 20px 0;
-  overflow-x: scroll;
-  margin: 0 10px;
-}
-.posts {
-  background: #ddd;
-}
 .side-menu {
   width: 30%;
 }

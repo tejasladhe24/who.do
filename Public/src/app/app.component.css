@@ -1,9 +1,4 @@
-.main {
-  overflow-y: scroll;
-}
-
 .grid-view {
-  background-color: #f8f7ff;
   display: grid;
   grid-template-columns: 300px auto 400px;
 }

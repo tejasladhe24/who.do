@@ -24,6 +24,7 @@ export class PostsComponent implements OnInit {
 
       for (let j = 0; j < user.posts.length; j++) {
         const post = user.posts[j];
+        const comments = post.comments;
         if (post.type == 0) {
           this.posts.push({
             type: post.type,
@@ -31,6 +32,7 @@ export class PostsComponent implements OnInit {
             img: post.img,
             date: post.date,
             story_read: story.read,
+            comments: comments,
           });
         } else if (post.type == 1) {
           this.posts.push({
@@ -40,6 +42,7 @@ export class PostsComponent implements OnInit {
             text: post.text,
             date: post.date,
             story_read: story.read,
+            comments: comments,
           });
         }
       }

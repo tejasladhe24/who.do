@@ -1,11 +1,17 @@
 <div class="post-item" *ngFor="let elem of posts">
-  <div class="flex space-between align-center">
+  <div
+    class="flex space-between align-center spaced-10"
+    style="margin-bottom: 10px"
+  >
     <div class="flex align-center spaced-10">
       <div>
-        <div *ngIf="!elem.story_read" class="icon profile-icon story-border">
+        <div
+          *ngIf="!elem.story_read"
+          class="icon profile-icon icn-48 story-border"
+        >
           <i class="fas fa-user" style="color: white"></i>
         </div>
-        <div *ngIf="elem.story_read" class="icon profile-icon">
+        <div *ngIf="elem.story_read" class="icon profile-icon icn-48">
           <i class="fas fa-user" style="color: white"></i>
         </div>
       </div>
@@ -15,14 +21,84 @@
       </div>
     </div>
     <div>
-      <i class="fas fa-ellipsis-v"></i>
+      <i class="fas fa-ellipsis-v link"></i>
     </div>
   </div>
-  <div *ngIf="elem.type == 0" class="post-content">
+  <div *ngIf="elem.type == 0">
     <img src="{{ elem.img }}" alt="" width="100%" />
   </div>
   <div *ngIf="elem.type == 1" class="post-content">
     <h3>{{ elem.heading }}</h3>
     <p>{{ elem.text }}</p>
+  </div>
+  <div class="hori-line"></div>
+  <div class="stats">
+    <div class="likes flex align-center justify-center link spaced-20">
+      25 <i class="fas fa-thumbs-up"></i>
+    </div>
+    <div class="ver-line"></div>
+    <div class="comments flex align-center justify-center link spaced-20">
+      10 <i class="fas fa-comments"></i>
+    </div>
+  </div>
+  <div class="hori-line"></div>
+  <div class="btns-grid">
+    <div class="btns-grid-item flex align-center justify-center spaced-20">
+      <i class="fas fa-thumbs-up"></i>
+      <i class="far fa-thumbs-up"></i>Like
+    </div>
+    <div class="btns-grid-item flex align-center justify-center spaced-20">
+      <i class="fas fa-comments"></i>Comment
+    </div>
+    <div class="btns-grid-item flex align-center justify-center spaced-20">
+      <i class="fas fa-share-square"></i>Share
+    </div>
+  </div>
+  <div class="comments-view">
+    <div class="comments-view-item">
+      <div class="icon profile-icon icn-48">
+        <i class="fas fa-user" style="color: white"></i>
+      </div>
+      <div>
+        <div class="comments-view-box">
+          <div class="name">Tejas Ladhe</div>
+          <div class="value">
+            <input
+              type="text"
+              class="form-control"
+              style="width: 100%"
+              placeholder="Add comment"
+            />
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+    <div
+      class="comments-view-item flex justify-center spaced-10"
+      *ngFor="let item of elem.comments"
+    >
+      <div class="icon profile-icon icn-48">
+        <i class="fas fa-user" style="color: white"></i>
+      </div>
+      <div>
+        <div class="comments-view-box">
+          <div class="name">
+            {{ item.name }}
+          </div>
+          <div class="value">
+            {{ item.value }}
+          </div>
+        </div>
+        <div class="comment-stats flex spaced-10">
+          <div>{{ item.date }}</div>
+        </div>
+      </div>
+      <div style="margin-top: 20px">
+        <i class="fas fa-thumbs-up link"></i>
+        <i class="far fa-thumbs-up link"></i>
+        <i class="fas fa-reply link"></i>
+      </div>
+    </div>
   </div>
 </div>

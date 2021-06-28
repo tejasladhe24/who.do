@@ -1,14 +1,7 @@
-div {
-  margin: 0 15px;
-}
-div p {
-  margin: 0;
-}
-
 .story-add {
   position: absolute;
-  bottom: -10%;
-  right: -25%;
+  bottom: 0px;
+  right: -5px;
 }
 
 .story-border {
@@ -16,9 +9,17 @@ div p {
 }
 
 .stories-panel {
-  background-color: #fff;
-  box-shadow: 0 0 45px #ddd;
+  background-color: #ffffff11;
+  box-shadow: 0 0 15px #000;
   padding: 20px 0;
-  border-radius: 2rem;
+  margin: 20px 0;
+  border-radius: 10px;
   overflow-x: scroll;
+}
+
+.story-item {
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

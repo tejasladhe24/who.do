@@ -9,11 +9,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 * {
   outline: none;
+  font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -66,6 +66,9 @@
 .space-around {
   justify-content: space-around;
 }
+.justify-center {
+  justify-content: center;
+}
 .align-center {
   align-items: center;
 }
@@ -85,6 +88,10 @@
 
 .spaced-10 * {
   margin: 0 5px;
+}
+
+.spaced-20 * {
+  margin: 0 10px;
 }
 
 .full-width {
@@ -181,14 +188,10 @@
 /* Designs */
 .hori-line {
   height: 1px;
-  margin: 10px;
-  background: #ccc;
 }
 
 .ver-line {
   width: 1px;
-  margin: 10px;
-  background: #ccc;
   height: 100%;
 }
 
@@ -198,8 +201,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+}
+.icn-24 {
+  width: 24px;
+  height: 24px;
+}
+.icn-48 {
+  width: 48px;
+  height: 48px;
+}
+.icn-72 {
+  width: 72px;
+  height: 72px;
+}
+.icn-96 {
+  width: 96px;
+  height: 96px;
 }
 
 .profile-icon {
@@ -211,18 +228,14 @@
   position: relative;
 }
 
-.search-input .fa-search {
-  position: absolute;
-  margin: 11px 0 0 10px;
-}
-
-.search-input input {
-  padding-left: 40px;
+.search-input {
+  display: flex;
+  align-items: center;
 }
 
 /* Text */
 * {
-  color: #666;
+  color: #aaa;
 }
 
 .bold {

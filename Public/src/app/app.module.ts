@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PostsModule } from './dashboard/posts/posts.module';
 import { StoriesModule } from './dashboard/stories/stories.module';
-import { SidebarModule } from './dashboard/sidebar/sidebar.module';
+import { SidebarModule } from './sidebar/sidebar.module';
 import { NavbarModule } from './navbar/navbar.module';
 
 @NgModule({
