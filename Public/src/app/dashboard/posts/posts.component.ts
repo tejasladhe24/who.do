@@ -24,7 +24,7 @@ export class PostsComponent implements OnInit {
 
       for (let j = 0; j < user.posts.length; j++) {
         const post = user.posts[j];
-        const comments = post.comments;
+        const comments = post.comments.slice(0, 2);
         if (post.type == 0) {
           this.posts.push({
             type: post.type,
